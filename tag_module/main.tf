@@ -3,9 +3,6 @@ data "tfe_workspace" "test" {
   organization = split("/",var.tfc_workspace_slug)[0]
 }
 
-variable "TFC_WORKSPACE_NAME" {}
-variable "TFC_WORKSPACE_SLUG" {}
-
 locals {
   single_tags = {
     for tag in data.tfe_workspace.test.tag_names : format("%s-%s","tag",tag) => tag
