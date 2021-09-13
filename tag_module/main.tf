@@ -1,6 +1,6 @@
 data "tfe_workspace" "test" {
-  name         = var.TFC_WORKSPACE_NAME
-  organization = split("/",var.TFC_WORKSPACE_SLUG)[0]
+  name         = var.tfc_workspace_name
+  organization = split("/",var.tfc_workspace_slug)[0]
 }
 
 variable "TFC_WORKSPACE_NAME" {}
